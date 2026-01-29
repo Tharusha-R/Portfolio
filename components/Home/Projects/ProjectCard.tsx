@@ -40,7 +40,7 @@ const ProjectCard = ({ project, onClick }: Props) => {
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className="
-            object-cover object-center
+            object-fit object-center
             transition-transform duration-500 ease-in-out
             group-hover:scale-110
           "
