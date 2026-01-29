@@ -12,9 +12,14 @@ const font= Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tharusha Portfolio | Next.js 15",
-  description: "portfolio built with Next.js 15",
+  title: "Tharusha Rukshan",
+  description: "Portfolio built with Next.js 15",
+  icons: {
+    icon: "/images/favicon-v2.ico", 
+    shortcut: "/images/favicon-v2.ico", 
+  },
 };
+
 
 export default function RootLayout({
   children,
