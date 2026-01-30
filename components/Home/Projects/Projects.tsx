@@ -63,8 +63,18 @@ const Projects = () => {
           {/* Project Row */}
           <div
             ref={carouselRef}
-            className="flex md:gap-38 gap-6 overflow-x-auto scrollbar-hide scroll-smooth py-4"
+            className="flex md:gap-38 gap-6 overflow-x-auto scroll-smooth py-4"
+            style={{
+              scrollbarWidth: "none",       
+              msOverflowStyle: "none",       
+            }}
           >
+            <style jsx>{`
+              div::-webkit-scrollbar {
+                display: none;               // Chrome, Safari
+              }
+            `}</style>
+          
             {projects.map((project) => (
               <div key={project.id} className="shrink-0 w-full md:w-[320px]">
                 <ProjectCard project={project} onClick={() => handleOpen(project.id)} />

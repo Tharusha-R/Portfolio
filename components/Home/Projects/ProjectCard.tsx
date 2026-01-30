@@ -30,7 +30,7 @@ const ProjectCard = ({ project, onClick }: Props) => {
       onClick={onClick}
       className="group relative cursor-pointer rounded-3xl bg-[#141432] border border-[#1f1f3a] shadow-[0_0_6px_rgba(99,102,241,0.15)]
         hover:border-blue-500/50 hover:shadow-[0_0_12px_rgba(99,102,241,0.35)] transition-all duration-300 overflow-hidden shrink-0
-        max:sm-80 md:w-md " >
+        max:sm-80 md:w-md  " >
             
       {/* Image */}
       <div className="relative w-full h-60 md:h-62 overflow-hidden">

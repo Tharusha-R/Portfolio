@@ -66,4 +66,26 @@ export const projects: Project[] = [
     tech: ["MongoDB", "Express", "React", "Node", "Tailwind", "Vite"],
     github: "https://github.com/Tharusha-R/AnyHire", 
   },
+
+
+  {
+  id: 4,
+  image: "/images/RuralLink.png",
+  title: "RuralLink",
+  shortDesc:
+    "A MERN-based platform improving last-mile delivery and financial tracking for rural entrepreneurs.",
+  fullDesc:
+    "RuralLink is a full-stack MERN web application developed as a group project to support rural entrepreneurs by simplifying last-mile delivery and business management. The system helps producers manage orders, track income and expenses, analyze financial trends, and coordinate deliveries more efficiently. With data visualization, multi-currency support, and secure cloud synchronization, RuralLink enables small-scale rural businesses to make data-driven decisions and reduce logistical challenges.",
+  features: [
+    "Order and delivery coordination for rural businesses",
+    "Income and expense tracking with progress visualization",
+    "Interactive analytics dashboard with financial insights",
+    "Multi-currency and localization support",
+    "Exportable financial reports (PDF & Excel)",
+    "Secure cloud backup and cross-device synchronization",
+  ],
+  tech: ["MongoDB", "Express", "React", "Node", "Tailwind", "Vite"],
+  github: "https://github.com/Tharusha-R/Rural-Link" 
+}
+
 ];

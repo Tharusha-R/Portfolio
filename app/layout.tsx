@@ -13,10 +13,9 @@ const font= Inter({
 
 export const metadata: Metadata = {
   title: "Tharusha Rukshan",
-  description: "Portfolio built with Next.js 15",
+  description: "Portfolio of Tharusha Rukshan – React, Next.js, Node.js & MongoDB projects.",
   icons: {
-    icon: "/images/favicon-v2.ico", 
-    shortcut: "/images/favicon-v2.ico", 
+    icon: "/favicon.svg",
   },
 };
 

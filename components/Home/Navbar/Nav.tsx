@@ -66,12 +66,19 @@ const Nav = ({openNav}:Props) => {
             })}
             </div>
             {/* CV Button */}
+            <a href="/Tharusha_CV.pdf" download>
             <button
-            className=" px-8 py-3.5  text-sm cursor-pointer rounded-lg bg-linear-to-r from-blue-500 to-blue-800 hover:from-blue-600 hover:to-blue-900
-                transition-all duration-300 text-white flex items-center space-x-2 " >
-            <BiDownload className="w-5 h-5" />
-            <span>Download CV</span>
+                className="px-8 py-3.5 text-sm cursor-pointer rounded-lg
+                bg-linear-to-r from-blue-500 to-blue-800
+                hover:from-blue-600 hover:to-blue-900
+                transition-all duration-300 text-white
+                flex items-center space-x-2"
+            >
+                <BiDownload className="w-5 h-5" />
+                <span>Download CV</span>
             </button>
+            </a>
+
             {/* Burger Menu */}
             < HiBars3BottomRight 
             onClick={openNav}  
