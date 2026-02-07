@@ -32,7 +32,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    image: "/images/CareLinkLK.jpg", 
+    image: "/images/CareLink.jpg", 
     title: "Care Link LK",
     shortDesc:
       "A JavaScript-based web app for clinics, caregivers, and patients in Sri Lanka.",
