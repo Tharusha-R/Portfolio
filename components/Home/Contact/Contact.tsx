@@ -15,42 +15,48 @@ import {
 export default function Contact() {
   const [loading, setLoading] = useState(false);
 
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
 
-  const form = e.currentTarget; // save reference here
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-  const formData = new FormData(form);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+      });
 
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: formData.get("name"),
-        email: formData.get("email"),
-        phone: formData.get("phone"),
-        message: formData.get("message"),
-      }),
-    });
+      const data = await res.json();
 
-    const data = await res.json();
-
-    if (res.ok && data.success) {
-      toast.success("✅ Message sent successfully!");
-      form.reset(); // use saved reference
-    } else {
-      toast.error("❌ Failed to send message. Please try again.");
+      if (res.ok && data.success) {
+        toast.success("✅ Message sent successfully!");
+        form.reset();
+      } else {
+        toast.error("❌ Failed to send message. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      toast.error("❌ Something went wrong. Please try again later.");
     }
-  } catch (err) {
-    console.error(err);
-    toast.error("❌ Something went wrong. Please try again later.");
-  }
 
-  setLoading(false);
-};
+    setLoading(false);
+  };
 
+  // Social links with your URLs
+  const socialLinks = [
+    { Icon: FaGithub, url: "https://github.com/Tharusha-R" },
+    { Icon: FaFacebookF, url: "https://www.facebook.com/share/184MgrQHHP/?mibextid=wwXIfr" },
+    { Icon: FaInstagram, url: "https://instagram.com/t._rukshan" },
+    { Icon: FaLinkedinIn, url: "http://www.linkedin.com/in/tharusha-rukshan-5a4831371" },
+  ];
 
   return (
     <section id="contact" className="bg-[#0d0d1f] py-32 px-6 md:px-16 text-white">
@@ -87,9 +93,12 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
           </div>
 
           <div className="flex gap-5 pt-4">
-            {[FaGithub, FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, i) => (
+            {socialLinks.map(({ Icon, url }, i) => (
               <motion.a
                 key={i}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.25, rotate: 8 }}
                 className="w-12 h-12 flex items-center justify-center rounded-full bg-[#141432]
                   border border-[#1f1f3a] text-gray-300 hover:text-blue-400
