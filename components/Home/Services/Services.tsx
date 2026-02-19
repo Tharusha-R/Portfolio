@@ -5,13 +5,13 @@ const Services = () => {
   return (
     <div className='pt-16 pb-16'>
       <h1 className="text-center text-white font-bold">
-        <span className="block text-2xl sm:text-3xl md:text-4xl bg-linear-to-r from-indigo-500  to-indigo-800  bg-clip-text text-transparent
+        <span className="block text-3xl sm:text-4xl md:text-5xl bg-linear-to-r from-indigo-500  to-indigo-800  bg-clip-text text-transparent
          xl:text-5xl text-primary"
           data-aos="fade-up"  
          >
           What I Can Do For You
         </span>
-        <span className="block mt-3 text-sm sm:text-base md:text-lg xl:text-xl font-normal text-gray-300"
+        <span className="block mt-3  max-lg:px-4 text-sm sm:text-base md:text-lg xl:text-xl font-normal text-gray-300"
          data-aos="fade-up" data-aos-delay="200" 
         >
           Crafting seamless, efficient, and visually stunning digital experiences.
