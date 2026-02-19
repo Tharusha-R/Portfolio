@@ -17,6 +17,7 @@ import {
   SiNextdotjs,
   SiFlutter,
   SiC,
+  SiLaravel,
 } from "react-icons/si";
 
 export interface SkillItem {
@@ -55,8 +56,9 @@ export const roadmapData: RoadmapItemData[] = [
   {
     year: "2023",
     title: "Backend & Programming Basics",
-    skills: [{ name: "Java", icon: FaJava },
-             { name: "C", icon: SiC },
+    skills: [
+      { name: "Java", icon: FaJava },
+      { name: "C", icon: SiC },
     ],
   },
   {
@@ -72,11 +74,18 @@ export const roadmapData: RoadmapItemData[] = [
   },
   {
     year: "2025",
-    title: "🚀 Next Target",
-    highlight: true,
+    title: "Modern Web Development with Next.js",
     skills: [
       { name: "Next.js", icon: SiNextdotjs },
+    ],
+  },
+  {
+    year: "2026",
+    title: "🚀 Next Target ",
+    highlight: true,
+    skills: [
       { name: "Flutter", icon: SiFlutter },
+      { name: "Laravel", icon: SiLaravel },
     ],
   },
 ];
